@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+/bin/systemctl daemon-reload || true
+/bin/systemctl enable gooroom-security-logant || true
+/bin/systemctl start gooroom-security-logant || true
+
+cp /usr/lib/gooroom-security-utils/gooroom-security-logparser.py /usr/bin/gooroom-security-logparser.py || true
+ln -s /usr/lib/gooroom-security-utils/antcli.py /usr/bin/antcli || true
+
+exit 0

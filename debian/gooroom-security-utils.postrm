@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+
+rm /usr/bin/gooroom-security-logparser.py || true
+rm /usr/bin/antcli || true
+
+exit 0
